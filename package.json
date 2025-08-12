@@ -1,0 +1,60 @@
+{
+  "name": "n8n-nodes-lclunchmenu4n8n",
+  "version": "0.1.0",
+  "description": "A custom n8n node to fetch and display school lunch menus from a specific XML endpoint.",
+  "keywords": [
+    "n8n-community-node-package"
+  ],
+  "license": "MIT",
+  "homepage": "https://n8n.io",
+  "author": {
+    "name": "Who Me",
+    "email": "example@example.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/user/LCLunchMenu4N8N.git"
+  },
+  "main": "dist/nodes/LunchMenu/LunchMenu.node.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier --write nodes credentials",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "npm run build && npm run lint -s",
+    "test": "jest"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [],
+    "nodes": [
+      "dist/nodes/LunchMenu/LunchMenu.node.js"
+    ]
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "date-fns": "^4.1.0",
+    "fast-xml-parser": "^4.4.0",
+    "n8n-core": "*",
+    "n8n-workflow": "*"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/xml2js": "^0.4.14",
+    "@typescript-eslint/parser": "~5.29.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.3",
+    "gulp": "^4.0.2",
+    "jest": "^29.7.0",
+    "n8n-node-dev": "*",
+    "prettier": "^2.8.8",
+    "ts-jest": "^29.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "xml2js": "^0.6.2"
+  }
+}
